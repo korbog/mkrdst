@@ -8,5 +8,26 @@ services:
       - "80:80"
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
-      - .:/var/www/app
+      - ./ui:/var/www/app
     restart: always
+    networks:
+      - app
+  app:
+    build: api
+    env_file: ".env"
+    depends_on:
+      - mongo
+    networks:
+      - app
+  mongo:
+    image: mongo:5.0
+    ports:
+      - "1488:27017"
+    env_file: ".env"
+    volumes:
+      - ./.mongo:/data/db
+    networks:
+      - app
+networks:
+  app:
+    driver: bridge
