@@ -45,8 +45,8 @@ app.post('/forms', async (req, res) => {
 
 app.get('/forms', async (req, res) => {
   try {
-    const forms = await db.collection('forms').find().toArray();
-    res.json(forms);
+    const forms = await db.collection('forms').find({}, { projection: { password: 0 } }).toArray();
+    res.json(forms.map(({ _id, ...rest }) => ({ id: _id, ...rest })));
   } catch (err) {
     console.error('Error fetching forms:', err);
     res.status(500).json({ error: 'Internal server error' });
