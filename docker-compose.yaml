@@ -19,6 +19,7 @@ services:
       - mongo
     networks:
       - app
+    restart: always
   mongo:
     image: mongo:5.0
     ports:
@@ -28,6 +29,7 @@ services:
       - ./.mongo:/data/db
     networks:
       - app
+    restart: always
 networks:
   app:
     driver: bridge
