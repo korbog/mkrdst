@@ -66,7 +66,7 @@ const searchInput = document.getElementById('search');
 searchInput.addEventListener('input', () => {
   const searchTerm = searchInput.value.toLowerCase();
   const filteredUsers = users.filter(user =>
-    user.lastName.toLowerCase().includes(searchTerm)
+    user.firstName.toLowerCase().includes(searchTerm)
   );
   displayUsers(filteredUsers);
 });

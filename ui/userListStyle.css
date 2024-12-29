@@ -256,12 +256,14 @@ tr{
     width: 400px;
     display: flex;
     flex-direction: row;
+    gap: 10px;
+    justify-content: start;
 }
 td,th{
     color: black;
     display: flex;
     justify-content: start;
-    width: 250px;
+    width: 300px;
 }
 h1{
     color: black;
