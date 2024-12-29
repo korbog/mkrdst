@@ -235,7 +235,7 @@ input::placeholder{
     background-color: rgba(0, 0, 0, 0);
     border: solid 1px black;
 }
-#nameSort:hover,#emailSort:hover,#idSort:hover{
+#nameSort:hover,#emailSort:hover,#lastNameSort:hover{
     cursor: pointer;
 }
 #emailSort{
@@ -244,7 +244,7 @@ input::placeholder{
     background-color: rgba(0, 0, 0, 0);
     border: solid 1px black;
 }
-#idSort{
+#lastNameSort{
     color: black;
     width: 100px;
     background-color: rgba(0, 0, 0, 0);
@@ -261,13 +261,7 @@ td,th{
     color: black;
     display: flex;
     justify-content: start;
-    width: 200px;
-}
-td:first-child,th:first-child{
-    width: 50px;
-}
-td:last-child,th:last-child{
-    width: 150px;
+    width: 250px;
 }
 h1{
     color: black;

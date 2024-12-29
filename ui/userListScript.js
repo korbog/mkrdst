@@ -3,7 +3,7 @@ let form;
 let language=true;
 function init(){
     form = document.getElementsByClassName('main');
-    fetchUsers();
+    fetchUsers()
 }
 function switchLanguage(){
     if (language==true){
@@ -39,7 +39,7 @@ function burgerOpen(){
 
 const root = document.getElementById('root');
 let users = [];
-let idCount=0,nameCount=0,emailCount=0;
+let lastNameCount=0,nameCount=0,emailCount=0;
 function fetchUsers() {
   fetch('http://api.darksoulstrilogy.fun/forms')
     .then(response => response.json())
@@ -55,8 +55,8 @@ function displayUsers(usersToDisplay) {
   usersToDisplay.forEach(user => {
     const row = document.createElement('tr');
     row.innerHTML = `
-      <td>${user.id}</td>
-      <td>${user.name}</td>
+      <td>${user.lastName}</td>
+      <td>${user.firstName}</td>
       <td>${user.email}</td>
     `;
     userTable.appendChild(row);
@@ -66,42 +66,42 @@ const searchInput = document.getElementById('search');
 searchInput.addEventListener('input', () => {
   const searchTerm = searchInput.value.toLowerCase();
   const filteredUsers = users.filter(user =>
-    user.name.toLowerCase().includes(searchTerm)
+    user.lastName.toLowerCase().includes(searchTerm)
   );
   displayUsers(filteredUsers);
 });
-function sortById() {
+function sortByLastName() {
   document.getElementById('nameSort').textContent ="Сорт Ім’я";
   document.getElementById('emailSort').textContent ="Сорт Email";
-  if(idCount==0){
-    document.getElementById('idSort').textContent ="Сорт ID ↑";
-    sortedUsers = [...users].sort((a, b) => b.id - a.id);
-    idCount=1;
+  if(lastNameCount==0){
+    document.getElementById('lastNameSort').textContent ="Сорт Прізв ↑";
+    sortedUsers = [...users].sort((a, b) => b.lastName.localeCompare(a.lastName));
+    lastNameCount=1;
   }
   else{
-    document.getElementById('idSort').textContent ="Сорт ID ↓";
-    sortedUsers = [...users].sort((a, b) => a.id - b.id);
-    idCount=0;
+    document.getElementById('lastNameSort').textContent ="Сорт Прізв ↓";
+    sortedUsers = [...users].sort((a, b) => a.lastName.localeCompare(b.lastName));
+    lastNameCount=0;
   }
   displayUsers(sortedUsers);
 }
 function sortByName() {
-  document.getElementById('idSort').textContent ="Сорт ID";
+  document.getElementById('lastNameSort').textContent ="Сорт Прізв";
   document.getElementById('emailSort').textContent ="Сорт Email";
   if(nameCount==0){
     document.getElementById('nameSort').textContent ="Сорт Ім’я ↑";
-    sortedUsers = [...users].sort((a, b) => b.name.localeCompare(a.name));
+    sortedUsers = [...users].sort((a, b) => b.firstName.localeCompare(a.firstName));
     nameCount=1;
   }
   else{
     document.getElementById('nameSort').textContent ="Сорт Ім’я ↓";
-    sortedUsers = [...users].sort((a, b) => a.name.localeCompare(b.name));
+    sortedUsers = [...users].sort((a, b) => a.firstName.localeCompare(b.firstName));
     nameCount=0;
   }
   displayUsers(sortedUsers);
 }
 function sortByEmail() {
-  document.getElementById('idSort').textContent ="Сорт ID";
+  document.getElementById('lastNameSort').textContent ="Сорт Прізв";
   document.getElementById('nameSort').textContent ="Сорт Ім’я"; 
   if(emailCount==0){
     document.getElementById('emailSort').textContent ="Сорт Email ↑";
