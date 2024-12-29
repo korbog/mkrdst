@@ -12,7 +12,10 @@ const DB_NAME = 'formsDB';
 app.use(cors());
 app.use(bodyParser.json());
 
-console.log(MONGO_URI)
+const isInvalidString = (value) => {
+  return typeof value !== 'string' || value.length < 5 || value.length > 100;
+}
+
 let db;
 MongoClient.connect(MONGO_URI, { useUnifiedTopology: true })
   .then(client => {
@@ -23,6 +26,14 @@ MongoClient.connect(MONGO_URI, { useUnifiedTopology: true })
 
 app.post('/forms', async (req, res) => {
   const { firstName, lastName, email, password } = req.body;
+
+  if (isInvalidString(firstName)) {
+    return res.status(422).json({ error: 'Invalid first name' });
+  }
+
+  if (isInvalidString(lastName)) {
+    return res.status(422).json({ error: 'Invalid last name' });
+  }
 
   if (!email || !/^[\w-.]+@[\w-]+\.[a-z]{2,}$/i.test(email)) {
     return res.status(422).json({ error: 'Invalid email format' });

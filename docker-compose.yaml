@@ -9,6 +9,7 @@ services:
     volumes:
       - ./nginx.conf:/etc/nginx/conf.d/default.conf:ro
       - ./ui:/var/www/app
+      - ./.htpasswd:/etc/nginx/.htpasswd
     restart: always
     networks:
       - app
