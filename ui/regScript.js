@@ -3,6 +3,10 @@ let form;
 let language=true;
 function init(){
     form = document.getElementsByClassName('main');
+    document.querySelector('#sendInfo').addEventListener('click', (event) => {
+        event.preventDefault();
+        sendForm();
+    });
 }
 function switchLanguage(){
     if (language==true){
@@ -46,7 +50,6 @@ async function sendForm() {
         email: email,
         password: password
     };
-    console.log(requestBody);
     try {
         const response = await fetch("http://api.darksoulstrilogy.fun/forms", {
             method: 'POST',
@@ -65,7 +68,3 @@ async function sendForm() {
         alert(`Network error: ${error.message}`);
     }
 }
-document.querySelector('#sendInfo').addEventListener('click', (event) => {
-    event.preventDefault();
-    sendForm();
-});
