@@ -1,12 +1,13 @@
 window.onload = init;
 let form;
 let language=true;
+console.log("global");
 function init(){
     form = document.getElementsByClassName('main');
     console.log( document.getElementById('#sendInfo'));
-    document.getElementById('#sendInfo').addEventListener('click', (event) => {
+    document.getElementById('sendInfo').addEventListener('click', (event) => {
+        event.preventDefault();
         sendForm();
-        console.log("working");
     });
 }
 function switchLanguage(){
@@ -41,17 +42,16 @@ function burgerOpen(){
     }
 }
 async function sendForm() {
-    const firstName = document.getElementById('#firstName').value;
-    const lastName = document.getElementById('#lastName').value;
-    const email = document.getElementById('#email').value;
-    const password = document.getElementById('#password').value;
+    const firstName = document.getElementById('firstName').value;
+    const lastName = document.getElementById('lastName').value;
+    const email = document.getElementById('email').value;
+    const password = document.getElementById('password').value;
     const requestBody = {
         firstName: firstName,
         lastName: lastName,
         email: email,
         password: password
     };
-    console.log(requestBody);
     try {
         const response = await fetch("http://api.darksoulstrilogy.fun/forms", {
             method: 'POST',
