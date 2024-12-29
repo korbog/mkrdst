@@ -4,8 +4,8 @@ let language=true;
 function init(){
     form = document.getElementsByClassName('main');
     document.getElementById('#sendInfo').addEventListener('click', (event) => {
-        event.preventDefault();
         sendForm();
+        console.log("working");
     });
 }
 function switchLanguage(){
