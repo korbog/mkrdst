@@ -36,12 +36,11 @@ function burgerOpen(){
     }
 }
 
-/*
 const root = document.getElementById('root');
 let users = [];
 let idCount=0,nameCount=0,emailCount=0;
 function fetchUsers() {
-  fetch('#')
+  fetch('http://api.darksoulstrilogy.fun/forms')
     .then(response => response.json())
     .then(data => {
       users = data;
@@ -116,4 +115,3 @@ function sortByEmail() {
   displayUsers(sortedUsers);
 }
 fetchUsers();
-*/

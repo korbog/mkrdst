@@ -35,3 +35,36 @@ function burgerOpen(){
         burgerCount=0;
     }
 }
+async function sendForm() {
+    const firstName = document.querySelector('#firstName').value;
+    const lastName = document.querySelector('#lastName').value;
+    const email = document.querySelector('#email').value;
+    const password = document.querySelector('#password').value;
+    const requestBody = {
+        firstName: firstName,
+        lastName: lastName,
+        email: email,
+        password: password
+    };
+    try {
+        const response = await fetch('http://api.darksoulstrilogy.fun/forms', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(requestBody)
+        });
+        if (!response.ok) {
+            const errorData = await response.json();
+            alert(`Error: ${errorData.error}`);
+        } else {
+            alert('Reg done');
+        }
+    } catch (error) {
+        alert(`Network error: ${error.message}`);
+    }
+}
+document.querySelector('#sendInfo').addEventListener('click', (event) => {
+    event.preventDefault();
+    sendForm();
+});

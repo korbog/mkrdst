@@ -319,6 +319,9 @@ input[type=text]{
     cursor: pointer;
     transition: 0.5s;
 }
+.buttonSend a{
+    color: black;
+}
 @media (max-width: 500px) {
     nav{
         display: none;
