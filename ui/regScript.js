@@ -3,7 +3,7 @@ let form;
 let language=true;
 function init(){
     form = document.getElementsByClassName('main');
-    document.querySelector('#sendInfo').addEventListener('click', (event) => {
+    document.getElementById('#sendInfo').addEventListener('click', (event) => {
         event.preventDefault();
         sendForm();
     });
@@ -40,10 +40,10 @@ function burgerOpen(){
     }
 }
 async function sendForm() {
-    const firstName = document.querySelector('#firstName').value;
-    const lastName = document.querySelector('#lastName').value;
-    const email = document.querySelector('#email').value;
-    const password = document.querySelector('#password').value;
+    const firstName = document.getElementById('#firstName').value;
+    const lastName = document.getElementById('#lastName').value;
+    const email = document.getElementById('#email').value;
+    const password = document.getElementById('#password').value;
     const requestBody = {
         firstName: firstName,
         lastName: lastName,
