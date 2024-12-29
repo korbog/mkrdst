@@ -50,6 +50,7 @@ async function sendForm() {
         email: email,
         password: password
     };
+    console.log(requestBody);
     try {
         const response = await fetch("http://api.darksoulstrilogy.fun/forms", {
             method: 'POST',
