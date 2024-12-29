@@ -8,6 +8,7 @@ function init(){
     document.getElementById('sendInfo').addEventListener('click', (event) => {
         event.preventDefault();
         sendForm();
+        return false;
     });
 }
 function switchLanguage(){
