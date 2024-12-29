@@ -3,6 +3,7 @@ let form;
 let language=true;
 function init(){
     form = document.getElementsByClassName('main');
+    console.log( document.getElementById('#sendInfo'));
     document.getElementById('#sendInfo').addEventListener('click', (event) => {
         sendForm();
         console.log("working");
