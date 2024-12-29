@@ -9,7 +9,7 @@ const PORT = process.env.PORT || 3000;
 const MONGO_URI = process.env.MONGO_URI || 'mongodb://mongo:27017';
 const DB_NAME = 'formsDB';
 
-app.use(cors());
+app.use(cors({ origin: process.env.CORS_ORIGIN }));
 app.use(bodyParser.json());
 
 const isInvalidString = (value) => {
