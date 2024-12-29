@@ -22,6 +22,19 @@ function switchLanguage(){
         document.querySelector('.ua').style.filter = 'none';
     }
 }
+let burgerCount=0;
+function burgerOpen(){
+    if(burgerCount==0){
+        document.querySelector('.burger').style="background-image:url('images/krestik.png')";
+        document.querySelector('.burgerWindow').style="display:flex";
+        burgerCount=1;
+    }
+    else{
+        document.querySelector('.burger').style="background-image:url('images/burger.png')";
+        document.querySelector('.burgerWindow').style="display:none";
+        burgerCount=0;
+    }
+}
 
 
 function bgSecondChange1(){
@@ -110,14 +123,14 @@ function chooseDS3(){
 }
 function chooseDS1Active(){
     if(ds1block==0){
+        document.querySelector('.chooseDS1').classList.add('chooseDsMobile');
         document.querySelector('.chooseDsBg1').style="backdrop-filter: blur(5px);height:70vh;transform:none;transition:0.5s;";
         document.querySelector('.chooseDS1').style="height:70vh; transition:0.5s ";
         document.querySelector('.chooseDsBg2').style="height:10vh ;transition:0.5s";
         document.querySelector('.chooseDsBg3').style="height:10vh;transition:0.5s ";
         document.querySelector('.chooseDS2').style="height:10vh ;transition:0.5s";
         document.querySelector('.chooseDS3').style="height:10vh ;transition:0.5s"; 
-        document.querySelector('.ds2Person').src="images/chooseDS2pmini.png";
-        document.querySelector('.ds3Person').src="images/chooseDS3pmini.png";
+
         document.querySelector('.ds1LogoTitle').src="images/ds1logo.png";
         document.querySelector('.ds2Person').style="opacity:100%; transition:0.1s";
         document.querySelector('.ds3Person').style="opacity:100%; transition:0.1s";
@@ -129,6 +142,7 @@ function chooseDS1Active(){
         ds3block=2;
     }
     else if(ds1block==1){
+        document.querySelector('.chooseDS1').classList.add('chooseDsMobile');
         document.querySelector('.chooseDsBg1').style="height:30vh;transform:none;transition:0.5s;";
         document.querySelector('.chooseDS1').style="height:30vh; transition:0.5s ";
         document.querySelector('.chooseDsBg2').style="height:30vh ;transition:0.5s";
@@ -148,14 +162,14 @@ function chooseDS1Active(){
         ds3block=0;
     }
     else if(ds1block==2){
+        document.querySelector('.chooseDS1').classList.add('chooseDsMobile');
         document.querySelector('.chooseDsBg1').style="height:70vh;transform:none;transition:0.5s;";
         document.querySelector('.chooseDS1').style="height:70vh; transition:0.5s ";
         document.querySelector('.chooseDsBg2').style="height:10vh ;transition:0.5s";
         document.querySelector('.chooseDsBg3').style="height:10vh;transition:0.5s ";
         document.querySelector('.chooseDS2').style="height:10vh ;transition:0.5s";
         document.querySelector('.chooseDS3').style="height:10vh ;transition:0.5s"; 
-        document.querySelector('.ds2Person').src="images/chooseDS2pmini.png";
-        document.querySelector('.ds3Person').src="images/chooseDS3pmini.png";
+
         document.querySelector('.ds1LogoTitle').src="images/ds1logo.png";
         document.querySelector('.ds2Person').style="opacity:100%; transition:0.1s";
         document.querySelector('.ds3Person').style="opacity:100%; transition:0.1s";
@@ -174,14 +188,14 @@ function chooseDS1Active(){
 }
 function chooseDS2Active(){
     if(ds2block==0){
+        document.querySelector('.chooseDS2').classList.add('chooseDsMobile');
         document.querySelector('.chooseDsBg2').style="height:70vh;transform:none;transition:0.5s;";
         document.querySelector('.chooseDS2').style="height:70vh; transition:0.5s ";
         document.querySelector('.chooseDsBg1').style="height:10vh ;transition:0.5s";
         document.querySelector('.chooseDsBg3').style="height:10vh;transition:0.5s ";
         document.querySelector('.chooseDS1').style="height:10vh ;transition:0.5s";
         document.querySelector('.chooseDS3').style="height:10vh ;transition:0.5s"; 
-        document.querySelector('.ds1Person').src="images/chooseDS1pmini.png";
-        document.querySelector('.ds3Person').src="images/chooseDS3pmini.png";
+
         document.querySelector('.ds2LogoTitle').src="images/ds2logo.png";
         document.querySelector('.ds2Person').style="opacity:100%; transition:0.1s";
         document.querySelector('.ds2Person').style="transform:scale(0.7); transition:0.5s;margin-bottom:-120px;";
@@ -192,6 +206,7 @@ function chooseDS2Active(){
         ds3block=2;
     }
     else if(ds2block==1){
+        document.querySelector('.chooseDS2').classList.add('chooseDsMobile');
         document.querySelector('.chooseDsBg2').style="height:30vh;transform:none;transition:0.5s;";
         document.querySelector('.chooseDS2').style="height:30vh; transition:0.5s ";
         document.querySelector('.chooseDsBg1').style="height:30vh ;transition:0.5s";
@@ -210,14 +225,14 @@ function chooseDS2Active(){
         ds3block=0;
     }
     if(ds2block==2){
+        document.querySelector('.chooseDS2').classList.add('chooseDsMobile');
         document.querySelector('.chooseDsBg2').style="height:70vh;transform:none;transition:0.5s;";
         document.querySelector('.chooseDS2').style="height:70vh; transition:0.5s ";
         document.querySelector('.chooseDsBg1').style="height:10vh ;transition:0.5s";
         document.querySelector('.chooseDsBg3').style="height:10vh;transition:0.5s ";
         document.querySelector('.chooseDS1').style="height:10vh ;transition:0.5s";
         document.querySelector('.chooseDS3').style="height:10vh ;transition:0.5s"; 
-        document.querySelector('.ds1Person').src="images/chooseDS1pmini.png";
-        document.querySelector('.ds3Person').src="images/chooseDS3pmini.png";
+
         document.querySelector('.ds2LogoTitle').src="images/ds2logo.png";
         document.querySelector('.ds1Person').style="opacity:100%; transition:0.1s";
         document.querySelector('.ds3Person').style="opacity:100%; transition:0.1s";
@@ -236,14 +251,14 @@ function chooseDS2Active(){
 }
 function chooseDS3Active(){
     if(ds3block==0){
+        document.querySelector('.chooseDS3').classList.add('chooseDsMobile');
         document.querySelector('.chooseDsBg3').style="height:70vh;transform:none;transition:0.5s;";
         document.querySelector('.chooseDS3').style="height:70vh; transition:0.5s ";
         document.querySelector('.chooseDsBg2').style="height:10vh ;transition:0.5s";
         document.querySelector('.chooseDsBg1').style="height:10vh;transition:0.5s ";
         document.querySelector('.chooseDS2').style="height:10vh ;transition:0.5s";
         document.querySelector('.chooseDS1').style="height:10vh ;transition:0.5s"; 
-        document.querySelector('.ds2Person').src="images/chooseDS2pmini.png";
-        document.querySelector('.ds1Person').src="images/chooseDS1pmini.png";
+
         document.querySelector('.ds3LogoTitle').src="images/ds3logo.png";
         document.querySelector('.ds2Person').style="opacity:100%; transition:0.1s";
         document.querySelector('.ds3Person').style="transform:scale(0.7); transition:0.5s;margin-bottom:-120px;";
@@ -254,6 +269,7 @@ function chooseDS3Active(){
         ds3block=1;
     }
     else if(ds3block==1){
+        document.querySelector('.chooseDS3').classList.add('chooseDsMobile');
         document.querySelector('.chooseDsBg3').style="height:30vh;transform:none;transition:0.5s;";
         document.querySelector('.chooseDS3').style="height:30vh; transition:0.5s ";
         document.querySelector('.chooseDsBg2').style="height:30vh ;transition:0.5s";
@@ -272,14 +288,14 @@ function chooseDS3Active(){
         ds3block=0;
     }
     if(ds3block==2){
+        document.querySelector('.chooseDS3').classList.add('chooseDsMobile');
         document.querySelector('.chooseDsBg3').style="height:70vh;transform:none;transition:0.5s;";
         document.querySelector('.chooseDS3').style="height:70vh; transition:0.5s ";
         document.querySelector('.chooseDsBg1').style="height:10vh ;transition:0.5s";
         document.querySelector('.chooseDsBg2').style="height:10vh;transition:0.5s ";
         document.querySelector('.chooseDS1').style="height:10vh ;transition:0.5s";
         document.querySelector('.chooseDS2').style="height:10vh ;transition:0.5s"; 
-        document.querySelector('.ds1Person').src="images/chooseDS1pmini.png";
-        document.querySelector('.ds2Person').src="images/chooseDS2pmini.png";
+
         document.querySelector('.ds3LogoTitle').src="images/ds3logo.png";
         document.querySelector('.ds1Person').style="opacity:100%; transition:0.1s";
         document.querySelector('.ds2Person').style="opacity:100%; transition:0.1s";
@@ -297,6 +313,7 @@ function chooseDS3Active(){
     }
 }
 function chooseDS1Return(){
+    document.querySelector('.chooseDS1').classList.remove('chooseDsMobile');
     if (ds1block == 0){
         document.querySelector('.chooseDsBg1').style="box-shadow: none;";
         document.querySelector('.ds1LogoTitle').src="images/ds1logo.png";
@@ -312,6 +329,7 @@ function chooseDS1Return(){
     }
 }
 function chooseDS2Return(){
+    document.querySelector('.chooseDS2').classList.remove('chooseDsMobile');
     if (ds2block == 0){
         document.querySelector('.chooseDsBg2').style="box-shadow: none;";
         document.querySelector('.ds2LogoTitle').src="images/ds2logo.png";
@@ -327,6 +345,7 @@ function chooseDS2Return(){
     }
 }
 function chooseDS3Return(){
+    document.querySelector('.chooseDS3').classList.remove('chooseDsMobile');
     if (ds3block == 0){
         document.querySelector('.chooseDsBg3').style="box-shadow: none;";
         document.querySelector('.ds3LogoTitle').src="images/ds3logo.png";
@@ -876,9 +895,130 @@ function characterNameActive13(){
     document.querySelector('.characterName1').style="display:none";
 }
 
-function playMusic(){
-    document.querySelector('.musicDisk').style="background-image: url(images/musicDisk2.gif);";
+let musicCount=0;
+let musicNum=0;
+const song0 = new Audio("/images/GwynMusic.mp3");
+const song1 = new Audio("/images/MajulaMusic.mp3");
+const song2 = new Audio("/images/SifMusic.mp3");
+const song3 = new Audio("/images/VordtMusic.mp3");
+const song4 = new Audio("/images/WatchersMusic.mp3");
+const song5 = new Audio("/images/AldiaMusic.mp3");
+const song6 = new Audio("/images/AlonneMusic.mp3");
+
+async function playMusic(){
+    if(musicCount==0)
+    {
+        if(musicNum==0){
+            song0.play();
+            document.querySelector('.musicBG').style="background-image: url(images/gwyn.png); transition:0.5s"
+            document.querySelector('.musicTheme1').style="display:flex;"
+        }
+        else if(musicNum==1){
+            song1.play();
+            document.querySelector('.musicBG').style="background-image: url(images/majula.png); transition:0.5s"
+            document.querySelector('.musicTheme2').style="display:flex;"
+        }
+        else if(musicNum==2){
+            song2.play();
+            document.querySelector('.musicBG').style="background-image: url(images/sif.png); transition:0.5s"
+            document.querySelector('.musicTheme3').style="display:flex;"
+        }
+        else if(musicNum==3){
+            song3.play();
+            document.querySelector('.musicBG').style="background-image: url(images/vordt.png); transition:0.5s"
+            document.querySelector('.musicTheme4').style="display:flex;"
+        }
+        else if(musicNum==4){
+            song4.play();
+            document.querySelector('.musicBG').style="background-image: url(images/watchers.png); transition:0.5s"
+            document.querySelector('.musicTheme5').style="display:flex;"
+        }
+        else if(musicNum==5){
+            song5.play();
+            document.querySelector('.musicBG').style="background-image: url(images/aldia.png); transition:0.5s"
+            document.querySelector('.musicTheme6').style="display:flex;"
+        }
+        else if(musicNum==6){
+            song6.play();
+            document.querySelector('.musicBG').style="background-image: url(images/alonne.png); transition:0.5s"
+            document.querySelector('.musicTheme7').style="display:flex;"
+        }
+        document.querySelector('.musicPlay').style="background-image: url(images/buttonPause.png);";
+        document.querySelector('.musicDisk').style="background-image: url(images/musicDisk2.gif);";
+        musicCount=1;
+    }
+    else{
+        if(musicNum==0){
+            song0.pause();
+        }
+        else if(musicNum==1){
+            song1.pause();
+        }
+        else if(musicNum==2){
+            song2.pause();
+        }
+        else if(musicNum==3){
+            song3.pause();
+        }
+        else if(musicNum==4){
+            song4.pause();
+        }
+        else if(musicNum==5){
+            song5.pause();
+        }
+        else if(musicNum==6){
+            song6.pause();
+        }
+        document.querySelector('.musicPlay').style="background-image: url(images/buttonPlay.png);";
+        document.querySelector('.musicDisk').style="animation-play-state: paused;";        
+        musicCount=0;
+    }
 }
-function stopMusic(){
-    document.querySelector('.musicDisk').style="animation-play-state: paused;";
+async function StartMusic(){
+    if(musicNum==0){
+        song0.pause();
+        song0.currentTime = 0
+    }
+    else if(musicNum==1){
+        song1.pause();
+        song1.currentTime = 0
+    }
+    else if(musicNum==2){
+        song2.pause();
+        song2.currentTime = 0
+    }
+    else if(musicNum==3){
+        song3.pause();
+        song3.currentTime = 0
+    }
+    else if(musicNum==4){
+        song4.pause();
+        song4.currentTime = 0
+    }
+    else if(musicNum==5){
+        song5.pause();
+        song5.currentTime = 0
+    }
+    else if(musicNum==6){
+        song6.pause();
+        song6.currentTime = 0
+    }
+    document.querySelector('.musicPlay').style="background-image: url(images/buttonPlay.png);";
+    document.querySelector('.musicDisk').style="animation-play-state: paused;";        
+    musicCount=0;
+}
+async function NextMusic(){
+    StartMusic();
+    document.querySelector('.musicTheme1').style="display:none;"
+    document.querySelector('.musicTheme2').style="display:none;"
+    document.querySelector('.musicTheme3').style="display:none;"
+    document.querySelector('.musicTheme4').style="display:none;"
+    document.querySelector('.musicTheme5').style="display:none;"
+    document.querySelector('.musicTheme6').style="display:none;"
+    document.querySelector('.musicTheme7').style="display:none;"
+    musicNum++;
+    if(musicNum==6){
+        musicNum=0;
+    }
+    playMusic();
 }

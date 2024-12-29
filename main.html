@@ -5,15 +5,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DSTrilogy</title>
     <link rel="stylesheet" href="styleMain.css">
+    <link rel="stylesheet" href="https://use.typekit.net/xgp2kwy.css">
     <script src="scriptMain.js"></script>
 </head>
 <body>
     <main class="main">
         <header>
-            <img class="logoDST" src="images/logo_dst.png" id="logoDST">
+            <div class="leftSideHead">
+                <img class="logoDST" src="images/logo_dst.png" id="logoDST">
+                <div class="burger" onclick="burgerOpen()"></div>
+                <ul class="burgerWindow">
+                    <div class="menuName"><a href="/main.html"><p class="ukrText">Головне меню</p><p class="engText">Main Menu</p></a></div>
+                    <div class="menuName"><a href="darksouls1.html"><p class="ukrText">Дарк Соулс 1</p><p class="engText">Dark Souls 1</p></a></div>
+                    <div class="menuName"><a href="darksouls2.html"><p class="ukrText">Дарк Соулс 2</p><p class="engText">Dark Souls 2</p></a></div>
+                    <div class="menuName"><a href="darksouls3.html"><p class="ukrText">Дарк Соулс 3</p><p class="engText">Dark Souls 3</p></a></div>
+                    <div class="menuName"><a href="anotherGames.html"><p class="ukrText">Ще ігри</p><p class="engText">More games</p></a></div>
+                    <div class="menuName"><a href="developers.html"><p class="ukrText">Розробник</p><p class="engText">Developers</p></a></div>
+                </ul>
+            </div>
             <nav>
                 <div class="menu">
-                    <div class="menuName"><a href="#"><p class="ukrText">Головне меню</p><p class="engText">Main Menu</p></a></div>
+                    <div class="menuName"><a href="/main.html"><p class="ukrText">Головне меню</p><p class="engText">Main Menu</p></a></div>
                     <ul>
                         <li class="intro"><div><p class="ukrText">О трилогії</p><p class="engText">About</p></div></li>
                         <li class="select"><div><p class="ukrText">Вибір гри</p><p class="engText">Choose</p></div></li>
@@ -29,7 +41,7 @@
                     </ul>
                 </div>
                 <div class="menu">
-                    <div class="menuName"><a href="#"><p class="ukrText">Дарк Соулс 1</p><p class="engText">Dark Souls 1</p></a></div>
+                    <div class="menuName"><a href="darksouls1.html"><p class="ukrText">Дарк Соулс 1</p><p class="engText">Dark Souls 1</p></a></div>
                     <ul>
                         <li class="intro"><div><p class="ukrText">О грі</p><p class="engText">About</p></div></li>
                         <li class="story"><div><p class="ukrText">Історія</p><p class="engText">Story</p></div></li>
@@ -46,7 +58,7 @@
                     </ul>
                 </div>
                 <div class="menu">
-                    <div class="menuName"><a href="#"><p class="ukrText">Дарк Соулс 2</p><p class="engText">Dark Souls 2</p></a></div>
+                    <div class="menuName"><a href="darksouls2.html"><p class="ukrText">Дарк Соулс 2</p><p class="engText">Dark Souls 2</p></a></div>
                     <ul>
                         <li class="intro"><div><p class="ukrText">О грі</p><p class="engText">About</p></div></li>
                         <li class="story"><div><p class="ukrText">Історія</p><p class="engText">Story</p></div></li>
@@ -63,7 +75,7 @@
                     </ul>
                 </div>
                 <div class="menu">
-                    <div class="menuName"><a href="#"><p class="ukrText">Дарк Соулс 3</p><p class="engText">Dark Souls 3</p></a></div>
+                    <div class="menuName"><a href="darksouls3.html"><p class="ukrText">Дарк Соулс 3</p><p class="engText">Dark Souls 3</p></a></div>
                     <ul>
                         <li class="intro"><div><p class="ukrText">О грі</p><p class="engText">About</p></div></li>
                         <li class="story"><div><p class="ukrText">Історія</p><p class="engText">Story</p></div></li>
@@ -80,32 +92,39 @@
                     </ul>
                 </div>
                 <div class="menu">
-                    <div class="menuName"><a href="#"><p class="ukrText">Ще ігри</p><p class="engText">More games</p></a></div>
+                    <div class="menuName"><a href="anotherGames.html"><p class="ukrText">Ще ігри</p><p class="engText">More games</p></a></div>
                     <ul>
                         <li class="elden"><div><p class="ukrText">Елден Рінг</p><p class="engText">Elden Ring</p></div></li>
                         <li class="blood"><div><p class="ukrText">Бладборн</p><p class="engText">Bloodborne</p></div></li>
                         <li class="demon"><div><p class="ukrText">Демон Соулс</p><p class="engText">Demon Souls</p></div></li>
+                        <li class="demon"><div><p class="ukrText">Секиро</p><p class="engText">Sekiro</p></div></li>
                     </ul>
                 </div>
                 <div class="menu">
-                    <div class="menuName"><a href="#"><p class="ukrText">Розробник</p><p class="engText">Developers</p></a></div>
+                    <div class="menuName"><a href="developers.html"><p class="ukrText">Розробник</p><p class="engText">Developers</p></a></div>
                     <ul>
-                        <li class="dev"><div><p class="ukrText"  >Розробник</p><p class="engText">Developers</p></div></li>
-                        <li class="pub"><div><p class="ukrText"  >Видавець</p><p class="engText">Publishers</p></div></li>
+                        <li class="dev"><div><p class="ukrText">Розробник</p><p class="engText">Developers</p></div></li>
+                        <li class="pub"><div><p class="ukrText">Видавець</p><p class="engText">Publishers</p></div></li>
                     </ul>
                 </div>
             </nav>
-            <div class="lang">
-                <div class="ukr">
-                    <img class="ua" src="images/ukr.png">
-                    <p>укр</p>
+            <div class="rightSideHead">
+                <div class="goToRegistrarion">
+                    <img class="iconLogin" src="/images/iconLogin.png">
+                    <a href="/reg.html"><p class="ukrText">Реєстрація</p><p class="engText">Registration</p></a>
                 </div>
-                <div class="switchLang">
-                    <button class="switchButton" onclick="switchLanguage()"></button>
-                </div>
-                <div class="eng">
-                    <img class="en" src="images/eng.webp">
-                    <p>eng</p>
+                <div class="lang">
+                    <div class="ukr">
+                        <img class="ua" src="images/ukr.png">
+                        <p>укр</p>
+                    </div>
+                    <div class="switchLang">
+                        <button class="switchButton" onclick="switchLanguage()"></button>
+                    </div>
+                    <div class="eng">
+                        <img class="en" src="images/eng.webp">
+                        <p>eng</p>
+                    </div>
                 </div>
             </div>
         </header>
@@ -115,10 +134,10 @@
                     <div class="bgSecond">
                         <div class="aboutLeft">
                             <div class="trilogyName">
-                                <p class="ukrText">Дарк Соулс Трилогія</p><p class="engText">Dark Souls Teilogy</p>
+                                <p class="ukrText">Дарк Соулс Трилогія</p><p class="engText">Dark Souls Trilogy</p>
                             </div>
                             <div class="trilogyInfo">
-                                <p class="ukrText">Жанр: Екшн/РПГ (Соулслайк)</p><p class="engText">Genre: Action/RPG (Soulslike)</p>
+                                <p class="ukrText">Жанр: Екшн/РПГ, Соулслайк</p><p class="engText">Genre: Action/RPG, Soulslike</p>
                                 <p class="ukrText">Розробник: FromSoftware</p><p class="engText">Developer: FromSoftware</p>
                                 <p class="ukrText">Роки: 2011 (Дарк Соулс 1), 2014 (Дарк Соулс 2), 2016 (Дарк Соулс 3)</p>
                                 <p class="engText">Years: 2011 (Dark Souls 1), 2014 (Dark Souls 2), 2016 (Dark Souls 3)</p>
@@ -151,6 +170,16 @@
                                 <img class="linkTrilogy" src="images/bandaiYTLink.png" onclick="location.href='https://www.youtube.com/@bandainamcoentertainment'">
                                 <img class="linkTrilogy" src="images/fromYTLink.png" onclick="location.href='https://www.youtube.com/@FromSoftwareInc'">
                             </div>
+                            <div class="trilogyLinksMobile1">
+                                <img class="linkTrilogy" src="images/bandaiLink.png" onclick="location.href='https://en.bandainamcoent.eu/dark-souls/dark-souls-trilogy'">
+                                <img class="linkTrilogy" src="images/fromLink.png" onclick="location.href='https://www.fromsoftware.jp/ww/'">
+                                <img class="linkTrilogy" src="images/darkLink.png" onclick="location.href='https://www.darksouls.jp/'">
+                            </div>
+                            <div class="trilogyLinksMobile2">
+                                <img class="linkTrilogy" src="images/wikiLink.png" onclick="location.href='https://en.wikipedia.org/wiki/Dark_Souls'">
+                                <img class="linkTrilogy" src="images/bandaiYTLink.png" onclick="location.href='https://www.youtube.com/@bandainamcoentertainment'">
+                                <img class="linkTrilogy" src="images/fromYTLink.png" onclick="location.href='https://www.youtube.com/@FromSoftwareInc'">
+                            </div>
                         </div>
                         <div class="aboutRight">
                             <div class="trilogyDS1">
@@ -168,7 +197,8 @@
             </div>
             <div class="chooseDS">
                 <div class="chooseTitle">
-                    <p>Выбирайте игру</p>
+                    <p class="ukrText">Вибирайте гру</p>
+                    <p class="engText">Choose a game</p>
                 </div>
                 <div class="chooseGames">
                     <div class="chooseDS1">
@@ -180,8 +210,26 @@
                                 <div class="chooseDs1Title">
                                     <img class="ds1LogoTitle" src="images/ds1logo.png" onclick="chooseDS1Active()" onmouseover="chooseDS1()" onmouseout="chooseDS1Return()">
                                 </div>
-                                <div class="chooseDs1Text">В Эру Древних мир был бесформенным, его окутывал туман. Это была земля серых утёсов, древних деревьев и присносущих драконов. Но затем был Огонь. И с приходом Огня всё распалось на две части. Жар и Холод, Жизнь и Смерть и конечно Свет и Тьма. И из Тьмы пришли Они, и Они нашли в пламени Души Повелителей: Нито — первый из мёртвых; Ведьма Изалита и её Дочери Хаоса;</div>
-                                <button class="chooseDs1Button">Подробнее</button>
+                                <div class="chooseDs1Text">
+                                    <p class="ukrText">
+                                        В Еру Стародавніх світ був безформним, його огортав туман. Це була земля сірих стрімчаків, древніх дерев і драконів.
+                                        Але потім був вогонь. І з приходом Вогню все розпалося на дві частини. Жар і Холод, Життя і Смерть і, звичайно, Світло і Темрява.
+                                        І з Тьми прийшли Вони, і Вони знайшли в полум'ї Душі Володарів: Ніто – перший із мертвих; Відьма Ізаліта та її Дочки Хаосу;
+                                    </p>
+                                    <p class="engText">
+                                        In the Age of the Ancients, the world was formless, shrouded in mist. It was a land of grey cliffs, ancient trees, and everlasting dragons.
+                                        But then came Fire. And with the coming of Fire, all things were divided into two. Heat and Cold, Life and Death, and of course Light and Darkness.
+                                        And from the Darkness They came, and They found in the flames the Souls of the Lords: Nito, the first of the dead; the Witch of Izalith and her Daughters of Chaos;
+                                    </p>
+                                </div>
+                                <button class="chooseDs1Button">
+                                    <p class="ukrText">
+                                        <a href="darksouls1.html">Більше</a>
+                                    </p>
+                                    <p class="engText">
+                                        <a href="darksouls1.html">More</a>
+                                    </p>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -194,8 +242,28 @@
                                 <div class="chooseDs2Title">
                                     <img class="ds2LogoTitle" src="images/ds2logo.png" onclick="chooseDS2Active()" onmouseover="chooseDS2()" onmouseout="chooseDS2Return()">
                                 </div>
-                                <div class="chooseDs2Text">В Эру Древних мир был бесформенным, его окутывал туман. Это была земля серых утёсов, древних деревьев и присносущих драконов. Но затем был Огонь. И с приходом Огня всё распалось на две части. Жар и Холод, Жизнь и Смерть и конечно Свет и Тьма. И из Тьмы пришли Они, и Они нашли в пламени Души Повелителей: Нито — первый из мёртвых; Ведьма Изалита и её Дочери Хаоса;</div>
-                                <button class="chooseDs2Button">Подробнее</button>
+                                <div class="chooseDs2Text">
+                                    <p class="ukrText">
+                                        Давним-давно, на краю землі, далеко на півночі, великий король створив могутнє королівство. Його назвали Дранглік. 
+                                        Можливо, тобі знайоме. Хоча ні, звідки тобі знати? Одного разу ти прийдеш до його застарілої брами. Сам не знаючи, навіщо... 
+                                        Як метелик, ваблений полум'ям свічки. І як у метелика, твої крила будуть обпалені, але не вогнем, а стражданням. 
+                                        Раз за разом. Це - твоя доля. Проклята доля..
+                                    </p>
+                                    <p class="engText">
+                                        Long ago, at the edge of the earth, far to the north, a great king created a mighty kingdom. They called it Drangleic. 
+                                        Perhaps you know it. No, how would you know? One day, you will come to its decrepit gates. Not knowing why... 
+                                        Like a moth drawn to a candle flame. And like a moth, your wings will be scorched, not by fire, but by suffering. 
+                                        Over and over again. This is your fate. Your cursed fate.
+                                    </p>
+                                </div>
+                                <button class="chooseDs2Button">
+                                    <p class="ukrText">
+                                        <a href="darksouls2.html">Більше</a>
+                                    </p>
+                                    <p class="engText">
+                                        <a href="darksouls2.html">More</a>
+                                    </p>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -208,8 +276,31 @@
                                 <div class="chooseDs3Title">
                                     <img class="ds3LogoTitle" src="images/ds3logo.png" onclick="chooseDS3Active()" onmouseover="chooseDS3()" onmouseout="chooseDS3Return()">
                                 </div>
-                                <div class="chooseDs3Text">В Эру Древних мир был бесформенным, его окутывал туман. Это была земля серых утёсов, древних деревьев и присносущих драконов. Но затем был Огонь. И с приходом Огня всё распалось на две части. Жар и Холод, Жизнь и Смерть и конечно Свет и Тьма. И из Тьмы пришли Они, и Они нашли в пламени Души Повелителей: Нито — первый из мёртвых; Ведьма Изалита и её Дочери Хаоса;</div>
-                                <button class="chooseDs3Button">Подробнее</button>
+                                <div class="chooseDs3Text">
+                                    <p class="ukrText">
+                                        І справді. Замок, що зветься Лотріком, стоїть там, де сходяться землі Повелителів попелу. 
+                                        Підкоряючи північ, пілігрими переконуються, що старі оповіді не брешуть. «Вогонь згасає, і володарі попелу залишають свої трони». 
+                                        Коли вогонь під загрозою, коли дзвонить дзвін, Володарі попелу піднімаються зі своїх могил. Але насправді... 
+                                        Повелителі залишать свої трони, і негорящі повстануть. Безіменна, проклята нежить, негідна стати попелом. 
+                                        І стало так. Негорячі завжди шукають вугілля.
+                                    </p>
+                                    <p class="engText">
+                                        Indeed. The castle called Lothric stands where the lands of the Lords of the Ashes meet. 
+                                        As the pilgrims conquer the north, they find that the old tales are true. 
+                                        ‘The fire dies out, and the Lords of Ashes leave their thrones.’ 
+                                        When the fire is threatened, when the bell tolls, the Lords of Ashes rise from their graves.But in reality... 
+                                        The lords will leave their thrones, and the unburned will rise. The nameless, cursed undead, unworthy to become ash. 
+                                        And so it has become. The Unburned are always looking for embers.
+                                    </p>                                
+                                </div>
+                                <button class="chooseDs3Button">
+                                    <p class="ukrText">
+                                        <a href="darksouls3.html">Більше</a>
+                                    </p>
+                                    <p class="engText">
+                                        <a href="darksouls3.html">More</a>
+                                    </p>
+                                </button>
                             </div>
                         </div>
                     </div>
@@ -217,102 +308,139 @@
             </div>
             <div class="locationsDS">
                 <div class="locationsMain">
-                    <div class="locationsTitle">Выбрали? В приключение!</div>
+                    <div class="locationsTitle">
+                        <p class="ukrText">Обрали? У пригоду!</p>
+                        <p class="engText">Have you chosen? On an adventure! </p>
+                    </div>
                     <div class="locationsActiveBG">
                         <div class="locationsActiveText">
                             <div class="leftButtonLocations" onclick="locationGoLeft()"></div>
                             <div class="locationsActiveName">
                                 <div class="locationTextTitleActive">
                                     <div class="topName">
-                                        <p class="anorLondoName">Анор Лондо</p>
-                                        <p class="vendrickName">Замок Вендрика</p>
-                                        <p class="iritilName">Иритил Холодной Долины</p>
+                                        <div class="anorLondoName"><p class="ukrText">Анор Лондо</p><p class="engText">Anor Londo</p></div>
+                                        <div class="vendrickName"><p class="vendrickName ukrText">Замок Дранглік</p><p class="engText">Drangleic Castle</p></div>
+                                        <div class="iritilName"><p class="iritilName ukrText">Ірітілл Холодної долини</p><p class="engText">Drangleic Castle</p></div>
                                     </div>
                                     <div class="rightName">
-                                        <p class="amaneName">Храм Амане</p>
-                                        <p class="blighttownName">Блайдтаун</p>
-                                        <p class="faronName">Фаррон</p>
+                                        <div class="amaneName"><p class="ukrText">Храм Амани</p><p class="engText">Shrine of Amana</p></div>
+                                        <div class="blighttownName"><p class="ukrText">Чумне Місто</p><p class="engText">Blighttown</p></div>
+                                        <div class="faronName"><p class="ukrText">Цитадель Фаррона</p><p class="engText">Farron Keep</p></div>
                                     </div>
                                     <div class="leftName">
-                                        <p class="eleumLoyceName">Елеум Лойс</p>
-                                        <p class="shizaName">Шиза</p>
-                                        <p class="demonRuinsName">Руины Демонов</p>
+                                        <div class="eleumLoyceName"><p class="ukrText">Крижана Елеум Лойс</p><p class="engText">Frozen Eleum Loyce</p></div>
+                                        <div class="shizaName"><p class="ukrText">Відвали</p><p class="engText">The Dreg Heap</p></div>
+                                        <div class="demonRuinsName"><p class="ukrText">Руїни демонів</p><p class="engText">Demon Ruins</p></div>
                                     </div>
                                     <div class="bottomName">
-                                        <p class="shulvaName">Шульва</p>
-                                        <p class="catacombsName">Катакомбы</p>
-                                        <p class="dungeonName">Подземелье</p>
+                                        <div class="shulvaName"><p class="ukrText">Шульва, Священне місто</p><p class="engText">Shulva, Sanctum City</p></div>
+                                        <div class="catacombsName"><p class="ukrText">Катакомби Картусу</p><p class="engText">Catacombs of Carthus</p></div>
+                                        <div class="dungeonName"><p class="ukrText">Підземелля Ірітілла</p><p class="engText">Irithyll Dungeon</p></div>
                                     </div>
                                 </div>
                                 <hr class="locationsLineActive">
                                 <div class="locationsTextActive">
                                     <div class="topText">
-                                        <p class="anorLondoText">
-                                            Анор Лондо, в которую персонаж может попасть, 
-                                            елепортировавшись из локации Храм огня. 
-                                            Высокая стена Лотрика появилась однажды из ниоткуда,
-                                        </p>
-                                        <p class="vendrickText">
-                                            Вендрик, в которую персонаж может попасть, 
-                                            елепортировавшись из локации Храм огня. 
-                                            Высокая стена Лотрика появилась однажды из ниоткуда,
-                                        </p>
-                                        <p class="iritilText">
-                                            Иритил, в которую персонаж может попасть, 
-                                            елепортировавшись из локации Храм огня. 
-                                            Высокая стена Лотрика появилась однажды из ниоткуда,
-                                        </p>
+                                        <div class="anorLondoText">
+                                            <p class="ukrText">
+                                                Легендарне покинуте місто Богів. Тут був престол Гвіна Повелителя Попелу і його відважних лицарів. Гвін покинув це місто вже дуже давно, і багато хто пішов за ним. З богів залишився тільки Гвіндолін Темне Сонце для захисту гробниці свого батька, Гвіна. Також він наклав на місто ілюзію, тому здається, що в Анор Лондо все ще світить сонце, і що Гвіневер Принцеса Світла все ще перебуває у своїй вежі, підживлюючи надії проклятих. 
+                                            </p>
+                                            <p class="engText">
+                                                The legendary abandoned city of the Gods. Here was the throne of Gwyn the Lord of the Ashes and his brave knights. Gwyn left this city a long time ago, and many followed him. Of the gods, only Gwindolyn the Dark Sun remained to protect the tomb of his father, Gwyn. He also cast an illusion on the city, so it seems that the sun still shines in Anor Londo, and that Gwynever the Princess of Light is still in her tower, feeding the hopes of the damned. 
+                                            </p>
+                                        </div>
+                                        <div class="vendrickText">
+                                            <p class="ukrText">
+                                                Після повернення з-за моря король Вендрик почав проводити експерименти з новопридбаними душами гігантів. Під час цих експериментів були отримані големи, які й виконали роль будівельників.
+                                            </p>
+                                            <p class="engText">
+                                                After returning from across the sea, King Wendrick began to conduct experiments with the newly acquired souls of the giants. During these experiments, golems were created, which played the role of builders.
+                                            </p>
+                                        </div>
+                                        <div class="iritilText">
+                                            <p class="ukrText">
+                                                Вкрите льодом і снігом місто, освітлюване тільки світлом Місяця, що навічно застиг над ним. Колись це місто було засноване навколо стародавнього Анор Лондо і було домівкою для аристократів, які поклонялися Місяцю, але зараз єдиними його жителями є понівечені духи, які перетворилися на тіні самих себе під керівництвом Понтифіка.
+                                            </p>
+                                            <p class="engText">
+                                                A city covered in ice and snow, illuminated only by the light of the moon, which is forever frozen above it. Once founded around the ancient Anor Londo, this city was home to moon-worshipping aristocrats, but now its only inhabitants are disfigured spirits who have become shadows of themselves under the leadership of the Pontiff.
+                                            </p>
+                                        </div   >
                                     </div>
                                     <div class="rightText">
-                                        <p class="amaneText">
-                                            Храм Амане, в которую персонаж может попасть, 
-                                            елепортировавшись из локации Храм огня. 
-                                            Высокая стена Лотрика появилась однажды из ниоткуда,
-                                        </p>
-                                        <p class="blighttownText">
-                                            Блайдтаун, в которую персонаж может попасть, 
-                                            елепортировавшись из локации Храм огня. 
-                                            Высокая стена Лотрика появилась однажды из ниоткуда,
-                                        </p>
-                                        <p class="faronText">
-                                            Фаррон, в которую персонаж может попасть, 
-                                            елепортировавшись из локации Храм огня. 
-                                            Высокая стена Лотрика появилась однажды из ниоткуда,
-                                        </p>
+                                        <div class="amaneText">
+                                            <p class="ukrText">
+                                                Заховане далеко під Дрангліком святилище Амани, під час входу в область гравець може почути спів у всій області, в цій області є кілька магів з далекобійними атаками, а також темні води з прихованими скринями і скелями. 
+                                            </p>
+                                            <p class="engText">
+                                                Hidden far beneath Dranglik is the shrine of Amana, when entering the area the player can hear singing throughout the area, there are several mages with ranged attacks in this area, as well as dark waters with hidden chests and rocks. 
+                                            </p>
+                                        </div>
+                                        <div class="blighttownText">
+                                            <p class="ukrText">
+                                                Чумне Місто може бути дуже лякаючим місцем. Будьте пильні; хиткі підвісні конструкції, які значно збільшують ризик падіння з висоти, і вороги, які, здається, виповзають із дерев'яних конструкцій, є постійною проблемою, доки ви не досягнете болота внизу, де ви зіткнетеся з новим набором проблем.                                            </p>
+                                            <p class="engText">
+                                                Blighttown can be a very intimidating place. Stay alert; rickety suspended structures that greatly increase the risk of falling from heights and enemies that seem to crawl out of wooden structures are a constant problem until you reach the swamp below, where you'll face a new set of challenges.
+                                            </p>
+                                        </div>
+                                        <div class="faronText">
+                                            <p class="ukrText">
+                                                Цитадель Фаррона - велика стародавня фортеця, побудована серед лісових нетрів, що нагадують Сад Темного Коріння, і служила домівкою для Легіону нежиті Фаррона і людей, які добровільно вирішили служити їм.
+                                            </p>
+                                            <p class="engText">
+                                                Farron's Citadel is a large ancient fortress built amidst the forest slums that resemble the Garden of Dark Roots, and served as home to Farron's Undead Legion and the people who voluntarily chose to serve them.
+                                            </p>
+                                        </div>
                                     </div>
                                     <div class="leftText">
-                                        <p class="eleumLoyceText">
-                                            Елеум Лойс, в которую персонаж может попасть, 
-                                            елепортировавшись из локации Храм огня. 
-                                            Высокая стена Лотрика появилась однажды из ниоткуда,
-                                        </p>
-                                        <p class="shizaText">
-                                            Шиза, в которую персонаж может попасть, 
-                                            елепортировавшись из локации Храм огня. 
-                                            Высокая стена Лотрика появилась однажды из ниоткуда,
-                                        </p>
-                                        <p class="demonRuinsText">
-                                            Руины Демонов, в которую персонаж может попасть, 
-                                            елепортировавшись из локации Храм огня. 
-                                            Высокая стена Лотрика появилась однажды из ниоткуда,
-                                        </p>
+                                        <div class="eleumLoyceText">
+                                            <p class="ukrText">
+                                                Являє собою стародавній храм і високі стіни стародавнього міста, яке замерзло під гнітом снігових бур. У ній вашими супротивниками стануть не тільки монстри, а й погана видимість у снігових бурях.
+                                            </p>
+                                            <p class="engText">
+                                                It is an ancient temple and the high walls of an ancient city that froze under the yoke of snow storms. In it, your opponents will be not only monsters, but also poor visibility in snow storms.
+                                            </p>
+                                        </div>
+                                        <div class="shizaText">
+                                            <p class="ukrText">
+                                                Занедбане, завалене уламками і попелом місце, що вміщає в себе залишки безлічі королівств і поселень, які існували в різний час у різних місцях. Перед настанням Ери Темряви, ці уламки стягуються на краю світу, нашаровуючись століттями і віщуючи швидкий кінець Ери Вогню.
+                                            </p>
+                                            <p class="engText">
+                                                An abandoned place, littered with rubble and ash, containing the remains of many kingdoms and settlements that existed at different times in different places. Before the onset of the Age of Darkness, these debris are piled up at the edge of the world, layered over centuries and heralding the imminent end of the Age of Fire.
+                                            </p>
+                                        </div>
+                                        <div class="demonRuinsText">
+                                            <p class="ukrText">
+                                                Руїни демонів лежать під самим Лордраном, розпростершись за Володінням Квілег. Ця локація схожа на Пекло через лаву, що заповнює її, а також за рахунок демонів, які будуть зустрічатися вам.
+                                            </p>
+                                            <p class="engText">
+                                                The Demon Ruins lie beneath Lordran itself, stretching beyond the Realm of Quileg. This location is similar to Hell because of the lava that fills it, as well as the demons you will encounter.
+                                            </p>
+                                        </div>
                                     </div>
                                     <div class="bottomText">
-                                        <p class="shulvaText">
-                                            Шульва, в которую персонаж может попасть, 
-                                            елепортировавшись из локации Храм огня. 
-                                            Высокая стена Лотрика появилась однажды из ниоткуда,
-                                        </p>
-                                        <p class="catacombsText">
-                                            Катакомбы, в которую персонаж может попасть, 
-                                            елепортировавшись из локации Храм огня. 
-                                            Высокая стена Лотрика появилась однажды из ниоткуда,
-                                        </p>
-                                        <p class="dungeonText">
-                                            Подземелье, в которую персонаж может попасть, 
-                                            елепортировавшись из локации Храм огня. 
-                                            Высокая стена Лотрика появилась однажды из ниоткуда,
-                                        </p>
+                                        <div class="shulvaText">
+                                            <p class="ukrText">
+                                                Шульва - місто, заховане десь у глибинах Чорної Расселіни. Це місто побудував Топлений Король, коли він виявив тут сплячого дракона. Люди, які стали тут жити, шануючи дракона як свій священний скарб. Жриці співали пісні Сіну, щоб зберегти його сон.
+                                            </p>
+                                            <p class="engText">
+                                                Shulva is a city hidden somewhere in the depths of the Black Russelina. This city was built by the Burnt King when he discovered a sleeping dragon. The people who lived here revered the dragon as their sacred treasure. The priestesses sang songs to Sin to keep him awake.
+                                            </p>
+                                        </div>
+                                        <div class="catacombsText">
+                                            <p class="ukrText">
+                                                Старі катакомби, прохід у які відкривається після вбивства Хранителів Безодні. Тунелі заповнені повсталими скелетами і картуською нежиттю, які охороняють прохід до свого владики - Верховного володаря Вольніра.
+                                            </p>
+                                            <p class="engText">
+                                                The old catacombs, the passage to which opens after the murder of the Guardians of the Abyss. The tunnels are filled with rebellious skeletons and the undead of Kartus, guarding the passage to their master, the High Lord Volnir.
+                                            </p>
+                                        </div>
+                                        <div class="dungeonText">
+                                            <p class="ukrText">
+                                                Локація являє собою похмуру в'язницю, збудовану всередині величезної скелі над Оскверненою столицею і розділену на кілька рівнів. Підземелля оголошують безперервні крики в'язнів, що упокорюють і калічать свою нікчемну плоть.                                            </p>
+                                            <p class="engText">
+                                                The location is a gloomy prison built inside a huge cliff above the Tainted Capital and divided into several levels. The dungeon is littered with the continuous screams of prisoners humbling and mutilating their worthless flesh.
+                                            </p>
+                                        </div>
                                     </div>
                                 </div>
                                 <button class="locationsReturn" onclick="locationsChooseReturn()">Назад</button>
@@ -393,10 +521,25 @@
                             <div class="characterItem" style="background-image: url(images/item12.png);" tabindex="1" onclick="characterNameActive12()"></div>
                             <div class="characterItem" style="background-image: url(images/item13.png);" tabindex="1" onclick="characterNameActive13()"></div>
                         </div>
+                        <div class="charactersItemsSecond" >
+                            <div class="characterItem" style="background-image: url(images/item1.png);" tabindex="1" onclick="characterNameActive1()"></div>
+                            <div class="characterItem" style="background-image: url(images/item2.png);" tabindex="1" onclick="characterNameActive2()"></div>
+                            <div class="characterItem" style="background-image: url(images/item3.png);" tabindex="1" onclick="characterNameActive3()"></div>
+                            <div class="characterItem" style="background-image: url(images/item4.png);" tabindex="1" onclick="characterNameActive4()"></div>
+                            <div class="characterItem" style="background-image: url(images/item5.png);" tabindex="1" onclick="characterNameActive5()"></div>
+                            <div class="characterItem" style="background-image: url(images/item6.png);" tabindex="1" onclick="characterNameActive6()"></div>
+                            <div class="characterItem" style="background-image: url(images/item7.png);" tabindex="1" onclick="characterNameActive7()"></div>
+                            <div class="characterItem" style="background-image: url(images/item8.png);" tabindex="1" onclick="characterNameActive8()"></div>
+                            <div class="characterItem" style="background-image: url(images/item9.png);" tabindex="1" onclick="characterNameActive9()"></div>
+                            <div class="characterItem" style="background-image: url(images/item10.png);" tabindex="1" onclick="characterNameActive10()"></div>
+                            <div class="characterItem" style="background-image: url(images/item11.png);" tabindex="1" onclick="characterNameActive11()"></div>
+                            <div class="characterItem" style="background-image: url(images/item12.png);" tabindex="1" onclick="characterNameActive12()"></div>
+                            <div class="characterItem" style="background-image: url(images/item13.png);" tabindex="1" onclick="characterNameActive13()"></div>
+                        </div>
                     </div>
                     <div class="charactersMainSecond">
                         <div class="characterName">
-                            <div class="characterNameBase"><p style="font-size: 30px;">Выберите персонажа</p><p>Когда-то Лудлет был ученым, изучавшим искусство транспозиции душ. В конце своей прошлой жизни он пожертвовал собой, чтобы возжечь Первое пламя.</p></div>
+                            <div class="characterNameBase"><p style="font-size: 30px;">Выберите персонажа</p><p>Узнайте немного информации о персонаже, его история, характер, поступки...</p></div>
                             <div class="characterName1"><p style="font-size: 30px;">Лудлет</p><p>Когда-то Лудлет был ученым, изучавшим искусство транспозиции душ. В конце своей прошлой жизни он пожертвовал собой, чтобы возжечь Первое пламя.</p></div>
                             <div class="characterName2"><p style="font-size: 30px;">Хранительница огня</p><p>Когда-то Лудлет был ученым, изучавшим искусство транспозиции душ. В конце своей прошлой жизни он пожертвовал собой, чтобы возжечь Первое пламя.</p></div>
                             <div class="characterName3"><p style="font-size: 30px;">Анри</p><p>Когда-то Лудлет был ученым, изучавшим искусство транспозиции душ. В конце своей прошлой жизни он пожертвовал собой, чтобы возжечь Первое пламя.</p></div>
@@ -477,23 +620,50 @@
                                 <p>Автор темы</p>
                                 <p>Дарк Соулс 1</p>
                             </div>
+                            <div class="musicTheme2">
+                                <p>Тема Маджула</p>
+                                <p>Автор темы</p>
+                                <p>Дарк Соулс 2</p>
+                            </div>
+                            <div class="musicTheme3">
+                                <p>Тема Сифа</p>
+                                <p>Автор темы</p>
+                                <p>Дарк Соулс 1</p>
+                            </div>
+                            <div class="musicTheme4">
+                                <p>Тема Вордта</p>
+                                <p>Автор темы</p>
+                                <p>Дарк Соулс 3</p>
+                            </div>
+                            <div class="musicTheme5">
+                                <p>Тема Вотчер</p>
+                                <p>Автор темы</p>
+                                <p>Дарк Соулс 3</p>
+                            </div>
+                            <div class="musicTheme6">
+                                <p>Тема Алдии</p>
+                                <p>Автор темы</p>
+                                <p>Дарк Соулс 2</p>
+                            </div>
+                            <div class="musicTheme7">
+                                <p>Тема Алонна</p>
+                                <p>Автор темы</p>
+                                <p>Дарк Соулс 2</p>
+                            </div>
                             <div class="musicButtons">
-                                <div class="musicP" onclick="stopMusic()"></div>
+                                <div class="musicP" onclick="StartMusic()"></div>
                                 <div class="musicPlay" onclick="playMusic()"></div>
-                                <div class="musicN"></div>
-                                <input type="range" value="0" id="progress">
+                                <div class="musicN" onclick="NextMusic()"></div>
                             </div>
                         </div>
-                        <div class="musicDisk">
-                            <div class="musicNames">
-                                <div class="musicName1"><p>Тема гвина</p></div>
-                            </div>
-                        </div>
+                        <div class="musicDisk"></div>
                     </div>
                 </div>
             </div>
         </main>
         <footer>
+            <div><p>©BANDAI NAMCO Entertainment Inc. / ©FromSoftware, Inc.</p></div>
+            <div><p>Сайт зробили Богдан, Олег, Максим</p></div>
         </footer>
     </main>
 </body>

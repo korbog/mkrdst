@@ -1,0 +1,384 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    color: white;
+    font-family: "trajan-pro-3", serif;
+}
+:root{
+    --index:calc(1vw + 1vh);
+    --character-transition: cubic-bezier(.1,.7,0,1);
+}
+body{
+    background-color:gray;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+header{
+    width: 100%;
+    height: 100px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.logoDST{
+    width: 60px;
+    height: 60px;
+}
+.logoDST:hover{
+    transform: scale(1.2);
+    transition: 0.5s;
+}
+nav{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    gap: 5px;
+}
+.menuName{
+    height: 100px;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menuName:hover{
+    background-color: grey;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+}
+.menuName:hover + ul{
+    display: flex;
+}
+.menu ul{
+    position: absolute;
+    list-style: none;
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    width: 140px;
+}
+.menu ul:hover{
+    display: flex;
+    margin-top: -3px;
+}
+.menu ul li div:hover{
+    cursor: pointer;
+    background-color: grey;
+    font-size: 18px;
+}
+.menu ul li div{
+    height: 30px;
+    width: 140px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.rightSideHead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10%;
+}
+.leftSideHead{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10%;
+}
+.burger{
+    display: none;
+    width: 100px;
+    height: 10vh;
+    background-image: url(images/burger.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: scale(0.5);
+}
+.burgerWindow{
+    display: none;
+    position: absolute;
+    list-style: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    margin-top: 100%;
+    margin-left: -15px;
+    width: 100%;
+}
+.burgerWindow .menuName{
+    height: 55px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.goToRegistrarion{
+    height: 10vh;
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+}
+.goToRegistrarion a:hover{
+    font-weight: 700;
+}
+.iconLogin{
+    height: 30%;
+}
+.lang{
+    display: flex;
+    flex-direction: row;
+}
+.eng,.ukr{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.en,.ua{
+    width: 20px;
+    height: 15px;
+}
+.ua{
+    filter: none;
+}
+.en{
+    filter: grayscale();
+}
+.switchLang{
+    width: 60px;
+    height: 30px;
+    border: 1px white solid;
+    border-radius: 20px;
+    margin-left: 5px;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding: 3px;
+}
+.switchButton{
+    height: 20px;
+    width: 20px;
+    background-color: white;
+    outline: none;
+    border: none;
+    border-radius: 50%;
+}
+.switchButton:hover{
+    background-color: grey;
+    cursor: pointer;
+}
+.switchButton:active{
+    height: 18px;
+    width: 18px;
+}
+.ukrText{
+    display: flex;
+}
+.engText{
+    display: none;
+}
+main{
+    width: 100%;
+}
+.bgSecond{
+    background-image: url(images/eldenBG2.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.bgSecond2{
+    background-image: url(images/bloodborneBG2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.bgSecond3{
+    background-image: url(images/demonSoulsBG2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.bgSecond4{
+    background-image: url(images/sekiroBG2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+.aboutLeft{
+    padding-left: 100px;
+    width: 45%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
+.trilogyName{
+    font-size: calc(var(--index)*1.8);
+}
+.trilogyInfo{
+    font-size: calc(var(--index)*.7);
+}
+.trilogyText{
+    font-size: calc(var(--index)*.65);
+}
+.trilogyLinks{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
+.trilogyLinksMobile1, .trilogyLinksMobile2{
+    display: none;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    gap: 20px;
+}
+.linkTrilogy{
+    width: calc(var(--index)*2);
+    height: calc(var(--index)*2);
+    filter: grayscale();
+    background-color: gray;
+    border-radius: 25%;
+}
+.linkTrilogy:hover{
+    scale: 0.9;
+    cursor: pointer;
+    filter: none;
+    background-color: white;
+    border: 3px solid gray;
+    transition: 0.25s;
+}
+.aboutRight{
+    padding-right: 100px;
+    width: 40%;
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: end;
+}
+.heroER{
+    height: 900px;
+    width: 600px;
+}
+.heroDemonSouls{
+    height: 900px;
+    width: 600px;
+}
+.heroBloodborne{
+    height: 900px;
+    width: 600px;
+}
+.heroSekiro{
+    height: 900px;
+    width: 600px;
+}
+footer{
+    width: 100%;
+    height: 10vh;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 15px;
+}
+@media (max-width: 500px) {
+    nav{
+        display: none;
+    }
+    .burger{
+        display: flex;
+    }
+    .rightSideHead{
+        gap: 0%;
+    }
+    .goToRegistrarion{
+        transform: scale(0.8);
+    }
+    .lang{
+        transform: scale(0.8);
+    }
+    .bgSecond{
+        height: 130vh;
+    }
+    .bgSecond2{
+        height: 130vh;
+    }
+    .bgSecond3{
+        height: 130vh;
+    }
+    .bgSecond4{
+        height: 130vh;
+    }
+    .aboutLeft{
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 5px;
+        height: 100%;
+    }
+    .aboutRight{
+        display: none;
+    }
+    .trilogyName{
+        font-size: calc(var(--index)*2.5);
+    }
+    .trilogyInfo{
+        font-size: calc(var(--index)*1.3);
+        width: 90%;
+    }
+    .trilogyText{
+        font-size: calc(var(--index)*1.2);
+        width: 95%;
+    }
+    .trilogyLinks{
+        display: none;
+    }
+    .trilogyLinksMobile1, .trilogyLinksMobile2{
+        display: flex;
+    }
+    .linkTrilogy{
+        width: calc(var(--index)*4);
+        height: calc(var(--index)*4);
+    }
+}
