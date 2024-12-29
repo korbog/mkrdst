@@ -3,6 +3,7 @@ let form;
 let language=true;
 function init(){
     form = document.getElementsByClassName('main');
+    fetchUsers();
 }
 function switchLanguage(){
     if (language==true){
@@ -114,4 +115,4 @@ function sortByEmail() {
   }
   displayUsers(sortedUsers);
 }
-fetchUsers();
+
